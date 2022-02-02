@@ -18,7 +18,9 @@ const Note = () => {
     <div className="note-right-wrapper">
       <div className="note-display">
         <h1 className="note-title">{title}</h1>
-        <p className="note-content">{content}</p>
+        <div dangerouslySetInnerHTML={{__html: content}}>
+
+        </div>
       </div>
       <div className="note-form">
         <NoteInput onChangeTitle={handleChangeTitle} onChangeContent={handleChangeContent} />

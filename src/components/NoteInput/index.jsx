@@ -2,12 +2,18 @@ import React from 'react';
 import './noteinput.scss';
 
 const NoteInput = ({onChangeTitle, onChangeContent}) => {
+
   const handleTitleInput = (e) => {
     onChangeTitle(e.target.value);
   }
 
   const handleContentInput = (e) => {
-    onChangeContent(e.target.value);
+    let showdown = require('showdown'),
+    converted = new showdown.Converter(),
+    text = e.target.value,
+    html = converted.makeHtml(text);
+    console.log(html);
+    onChangeContent(html);
   }
 
   return (
