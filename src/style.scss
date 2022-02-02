@@ -1,0 +1,23 @@
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: #222;
+  color: #eee;
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+.notes-list {
+  width: 25%;
+  min-width: 250px;
+  background-color: #aaa;
+}
+
+.note-wrapper {
+  flex-grow: 1;
+}

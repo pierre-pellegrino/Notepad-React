@@ -1,0 +1,16 @@
+.note-right-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.note-display {
+  height: 50%;
+  flex-grow: 1;
+  padding: 46px;
+
+  h1 {
+    color: #F0F757;
+    margin-bottom: 16px;
+  }
+}
