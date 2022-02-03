@@ -2,7 +2,7 @@ import React from 'react';
 import NoteInput from '../NoteInput';
 import './note.scss';
 
-const Note = ({onNewNote}) => {
+const Note = ({onNewNote, noteIndex, onNoteIndex}) => {
   const [title, setTitle] = React.useState();
   const [content, setContent] = React.useState();
 
@@ -21,7 +21,7 @@ const Note = ({onNewNote}) => {
         <div className="note-content" dangerouslySetInnerHTML={{__html: content}}></div>
       </div>
       <div className="note-form">
-        <NoteInput onChangeTitle={handleChangeTitle} onChangeContent={handleChangeContent} onNewNote={onNewNote} />
+        <NoteInput onChangeTitle={handleChangeTitle} onChangeContent={handleChangeContent} onNewNote={onNewNote} noteIndex={noteIndex} onNoteIndex={onNoteIndex} />
       </div>
     </div>
   );

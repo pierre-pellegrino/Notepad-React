@@ -12,6 +12,10 @@
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+
+    .note-card-close {
+      display: block;
+    }
   }
 
   h2 {
@@ -26,5 +30,6 @@
     right: 12px;
     font-size: 1.3em;
     z-index: 999;
+    display: none;
   }
 }
