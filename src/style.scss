@@ -19,8 +19,16 @@
   border-right: 2px solid white;
 }
 
+.new-note.btn {
+  color: black;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .note-wrapper {
   flex-grow: 1;
+  overflow-y: hidden;
+  max-width: 75%;
 }
 
 ::-webkit-scrollbar {
@@ -60,4 +68,5 @@
   padding: 32px;
   overflow-y: auto;
   height: 100%;
+  max-height: 100vh;
 }

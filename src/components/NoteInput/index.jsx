@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './noteinput.scss';
 
 const NoteInput = ({onChangeTitle, onChangeContent, onNewNote, noteIndex, onNoteIndex}) => {
@@ -53,6 +53,10 @@ const NoteInput = ({onChangeTitle, onChangeContent, onNewNote, noteIndex, onNote
     text      = converter.makeMarkdown(html);
     return text;
   }
+  
+  useEffect(() => {
+    document.getElementById('title-input').focus();
+  }, []);
 
   if (noteIndex < 0) {
     return (
@@ -67,15 +71,15 @@ const NoteInput = ({onChangeTitle, onChangeContent, onNewNote, noteIndex, onNote
     );
   }
   else {
-    // handleTitleInput(0, localStorage.key(noteIndex));
-    // handleContentInput(0, localStorage.getItem(localStorage.key(noteIndex)));
-    // onNoteIndex(-1);
+    onChangeContent(localStorage.getItem(localStorage.key(noteIndex)));
+    onChangeTitle(localStorage.key(noteIndex));
+    onNoteIndex(-1);
     return (
       <>
         <div className="inputs-wrapper">
           <p className="empty-title">Merci de choisir un titre</p>
-          <input type="text" id="title-input" onChange={handleTitleInput} defaultValue={localStorage.key(noteIndex)}></input>
-          <textarea id="text-input" onChange={handleContentInput} defaultValue={htmlToMarkdown(localStorage.getItem(localStorage.key(noteIndex)))}></textarea>
+          <input type="text" id="title-input" onChange={handleTitleInput} value={localStorage.key(noteIndex)}></input>
+          <textarea id="text-input" onChange={handleContentInput} value={htmlToMarkdown(localStorage.getItem(localStorage.key(noteIndex)))}></textarea>
           <button className="save-btn btn" onClick={handleSaveClick}>Enregistrer</button>
         </div>
       </>

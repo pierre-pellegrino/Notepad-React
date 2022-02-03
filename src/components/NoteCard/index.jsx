@@ -4,7 +4,6 @@ import './notecard.scss';
 const NoteCard = ({nKey, nValue, index, onDeleteNote, onLoadNote}) => {
 
   const handleNoteClick = (e) => {
-    console.log(localStorage.key(index))
     onLoadNote(index)
   }
 
