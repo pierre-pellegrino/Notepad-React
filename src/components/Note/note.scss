@@ -8,6 +8,12 @@
   height: 50%;
   flex-grow: 1;
   padding: 46px;
+  overflow-y: scroll;
+
+  // +1 point pour l'easter egg
+  #lucas, #laurent, #cedric {
+    color: #E4B7E5;
+  }
 
   h1 {
     color: #F0F757;

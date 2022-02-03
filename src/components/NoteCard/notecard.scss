@@ -1,0 +1,30 @@
+.note-card-wrapper {
+  margin-bottom: 32px;
+  overflow-wrap: break-word;
+  cursor: pointer;
+  padding: 6px;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+
+  h2 {
+    color: #F0F757;
+    margin-bottom: 6px;
+  }
+
+  .note-card-close {
+    color: #F0F757;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.3em;
+    z-index: 999;
+  }
+}
